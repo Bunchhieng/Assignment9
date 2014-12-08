@@ -1,4 +1,4 @@
-/*  File:  D:\H-Drive\91-461\461-2014-15f\assn09\MySolution\jmh-assn09.css
+/*
 *  Jesse M. Heines, UMass Lowell Computer Science, heines@cs.uml.edu
 *  Copyright (c) 2014 by Jesse M. Heines.  All rights reserved.  May be freely
 *    copied or excerpted for educational purposes with credit to the author.
@@ -6,6 +6,7 @@
 *
 *  User: Bunchhieng Soth, bsoth@cs.uml.edu
 *  Modified on: 12/03/2014
+*  File: css/style.css
 */
 
 /* Import google font */
@@ -29,7 +30,7 @@ a {
 }
 a:hover {
    color: #afc11f;
-   background: #bc137c;
+   background: #f83706;
 }
 /* centering content of the page */
 #content {
@@ -114,7 +115,7 @@ hr:after {
 /* reverse video header row */
 #peopleInfo thead tr th {
    color: #71c2eb ;
-   background-color: #0f0f0f ;
+   background-color: #eaeaea ;
 }
 
 /* add white right borders to adjacent black header row cells */
@@ -129,6 +130,11 @@ hr:after {
 #peopleInfo thead tr th:nth-child(4) {
    color: black ;
    background-color: lightgreen ;
+}
+
+/* Reverse color of each other row of the table */
+#peopleInfo tr:nth-child(even) {
+   background-color: #547fdb;
 }
 
 /* handle rollovers on clickable columns */

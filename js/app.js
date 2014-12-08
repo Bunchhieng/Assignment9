@@ -1,10 +1,11 @@
 /**
  * Author: Bunchhieng Soth, bsoth@cs.uml.edu
  * Created on: 12/03/2014
+ * File: js/app.js
  *
- * This is app module for AngularJS application.
+ * This is app module, controller and custom filter for AngularJS application.
  *
- * Part of this app.js is taken from Prof. Heines starter code.
+ * Part of this app.js code is taken from Prof. Heines starter code.
  */
 
 "use strict"; // to ensure that all variables are declared before use
@@ -92,9 +93,11 @@ myApp.filter('domain', function() {
       output = '',
       /**
        * This code is taken from http://stackoverflow.com/questions/569137/how-to-get-domain-name-from-url
+       *
+       * I modified regex by adding more top level domains.
        */
 
-    urls = /^(?:www\.)?(.*?)\.(?:com|net|jp|edu|org|gov|de|cn|cz|hk|me|ru|ch|uk|gl|br|fr|fm|au\.uk|co\.in)$/;
+    urls = /^(?:www\.)?(.*?)\.(?:com|net|jp|edu|org|gov|de|cn|cz|hk|me|ru|ch|uk|gl|br|fr|io|ly|nl|cc|pl|au|it|fm|au\.uk|co\.in)$/;
     matches = urls.exec(input);
     if (matches != null) output = matches[1];
 
