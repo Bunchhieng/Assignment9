@@ -43,7 +43,7 @@ myApp.controller('peopleInfo',
     $scope.date = new Date(); // get the current date and time
     // see http://stackoverflow.com/questions/22962468/angularjs-display-current-date
 
-    // set the initial sort field (student name) and sort order (ascending)
+    // set the initial sort field (people name) and sort order (ascending)
     $scope.sortField = "name";
     $scope.sortDescending = false;
 
@@ -64,13 +64,13 @@ myApp.controller('peopleInfo',
       if (colNo === 2) {
         // this is the Student Name column
         $scope.sortField = "name";
-        // the following statement was used in a previous version of this app
+        // The following statement was used in a previous version of this app.
         // before adding the orderBy filter to the ng-repeat directive
-        //    $scope.jsonData.data.RECORDS.sort( sort_by( "student_name", boolSortAscending ) ) ;
       } else if (colNo === 3) {
+         // This is the language column.
         $scope.sortField = "language";
       } else if (colNo === 4) {
-        // this is the Submit Date & Time column
+        // This is the webpage column.
         $scope.sortField = "webPage";
         // the following statement was used in a previous version of this app
         // before adding the orderBy filter to the ng-repeat directive
@@ -96,9 +96,14 @@ myApp.filter('domain', function() {
        *
        * I modified regex by adding more top level domains.
        */
-
+    // Regex validation to split out domain between www and top level domains
     urls = /^(?:www\.)?(.*?)\.(?:com|net|jp|edu|org|gov|de|cn|cz|hk|me|ru|ch|uk|gl|br|fr|io|ly|nl|cc|pl|au|it|fm|au\.uk|co\.in)$/;
+    /*
+     * The exec() method executes for a match.
+     * Match all domain name, ignore www and top level domains in link
+     */
     matches = urls.exec(input);
+    // If there is no match return the initial link
     if (matches != null) output = matches[1];
 
     return output;
