@@ -62,8 +62,6 @@ and the version information that immediately follows it on the next line */
    margin: 0;
    border-radius: 3px;
    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
-   -webkit-transition: all 0.2s ease-in;
-   appearance: textfield;
 }
 
 /* Increase fonsize and change style for placeholder */
